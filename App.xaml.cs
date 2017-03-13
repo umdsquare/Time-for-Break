@@ -23,7 +23,7 @@ namespace TimeforBreak
         //RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
 
         // TODO: Make this unique!
-        private const string Unique = "TimeforBreak";
+        private const string Unique = "Time for Break";
 
         [STAThread]
         public static void Main()
@@ -42,6 +42,13 @@ namespace TimeforBreak
         #region ISingleInstanceApp Members
         public bool SignalExternalCommandLineArgs(IList<string> args)
         {
+            // Bring window to foreground
+            //if (this.MainWindow.WindowState == WindowState.Minimized)
+            //{
+            //    this.MainWindow.WindowState = WindowState.Normal;
+            //}
+
+            this.MainWindow.Activate();
             // Handle command line arguments of second instance
             return true;
         }
@@ -62,6 +69,7 @@ namespace TimeforBreak
             //}
 
             this.Dispatcher.UnhandledException += OnDispatcherUnhandledException;
+            appShortcut("Time for Break");
 
             //ReadAllSettings();
             // AddToStartup();
@@ -81,49 +89,78 @@ namespace TimeforBreak
             }
         }
 
-        static void ReadAllSettings()
+        private void appShortcut(string linkName)
         {
-            try
-            {
-                var appSettings = ConfigurationManager.AppSettings;
-
-                if (appSettings.Count == 0)
-                {
-                    Trace.WriteLine("AppSettings is empty.");
-                }
-                else
-                {
-                    foreach (var key in appSettings.AllKeys)
-                    {
-                        Trace.WriteLine("Key: {0} Value: {1}" + key + appSettings[key]);
-                    }
-                }
-            }
-            catch (ConfigurationErrorsException)
-            {
-                Trace.WriteLine("Error reading app settings");
-            }
-        }
-
-        public static void AddToStartup()
-        {
+            //string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
             var startup = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
-            Trace.WriteLine("startup = " + startup);
-            string BaseDir = Assembly.GetEntryAssembly().Location;
-            Trace.WriteLine("Basedir = " + BaseDir);
 
-            if (!File.Exists((startup + @"\" + "Time For Break.exe")))
+            if (!File.Exists((startup + @"\" + "Time For Break")))
             {
                 try
                 {
-                    File.Copy(BaseDir, startup + @"\" + "Time For Break.exe");
+                    using (StreamWriter writer = new StreamWriter(startup + "\\" + linkName + ".url"))
+                    {
+                        string app = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                        writer.WriteLine("[InternetShortcut]");
+                        writer.WriteLine("URL=file:///" + app);
+                        writer.WriteLine("IconIndex=0");
+                        string icon = app.Replace('\\', '/');
+                        writer.WriteLine("IconFile=" + icon);
+                        writer.Flush();
+                    }
                 }
                 catch (Exception e1)
                 {
                     Trace.WriteLine(e1.ToString());
                 }
             }
+
+           
         }
+
+        //static void ReadAllSettings()
+        //{
+        //    try
+        //    {
+        //        var appSettings = ConfigurationManager.AppSettings;
+
+        //        if (appSettings.Count == 0)
+        //        {
+        //            Trace.WriteLine("AppSettings is empty.");
+        //        }
+        //        else
+        //        {
+        //            foreach (var key in appSettings.AllKeys)
+        //            {
+        //                Trace.WriteLine("Key: {0} Value: {1}" + key + appSettings[key]);
+        //            }
+        //        }
+        //    }
+        //    catch (ConfigurationErrorsException)
+        //    {
+        //        Trace.WriteLine("Error reading app settings");
+        //    }
+        //}
+
+        //public static void AddToStartup()
+        //{
+        //    var startup = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
+        //    Trace.WriteLine("startup = " + startup);
+        //    string BaseDir = Assembly.GetEntryAssembly().Location;
+        //    Trace.WriteLine("Basedir = " + BaseDir);
+
+        //    if (!File.Exists((startup + @"\" + "Time For Break.exe")))
+        //    {
+        //        try
+        //        {
+        //            File.Copy(BaseDir, startup + @"\" + "Time For Break.exe");
+        //        }
+        //        catch (Exception e1)
+        //        {
+        //            Trace.WriteLine(e1.ToString());
+        //        }
+        //    }
+        //}
 
 
 

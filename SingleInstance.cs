@@ -31,6 +31,7 @@ namespace Microsoft.Shell
     using System.Security;
     using System.Runtime.InteropServices;
     using System.ComponentModel;
+    using System.Diagnostics;
 
     internal enum WM
     {
@@ -420,6 +421,7 @@ namespace Microsoft.Shell
             {
                 // Invoke a method of the remote service exposed by the first instance passing on the command line
                 // arguments and causing the first instance to activate itself
+                Trace.WriteLine("firstInstanceRemoteServiceReference = " + firstInstanceRemoteServiceReference);
                 firstInstanceRemoteServiceReference.InvokeFirstInstance(args);
             }
         }

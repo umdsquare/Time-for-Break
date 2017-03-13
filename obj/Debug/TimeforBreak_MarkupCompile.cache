@@ -9,12 +9,12 @@ TimeforBreak
 none
 false
 DEBUG;TRACE
-c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\App.xaml
-12208068455
+
+13576130571
 
 18-1401361683
 19-1851336331
-Breakmode.xaml;Buffwin.xaml;exitwin.xaml;loginwindow.xaml;logout.xaml;MainWindow.xaml;Notiwin1.xaml;Notiwin2.xaml;NotiWindow.xaml;Settings.xaml;Setup.xaml;signup.xaml;
+App.xaml;Breakmode.xaml;Buffwin.xaml;exitwin.xaml;loginwindow.xaml;logout.xaml;MainWindow.xaml;Notiwin1.xaml;Notiwin2.xaml;NotiWindow.xaml;Settings.xaml;Setup.xaml;signup.xaml;
 
 False
 

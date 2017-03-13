@@ -246,18 +246,21 @@ namespace TimeforBreak
 
         private void SystemEvents_SessionSwitch(object sender, SessionSwitchEventArgs e)
         {
-            foreach (Window w in Application.Current.Windows)
+            if (user.onBreak)
             {
-                if (w is Breakmode)
+                foreach (Window w in Application.Current.Windows)
                 {
+                    if (w is Breakmode)
+                    {
 
-                    w.Topmost = false;
-
+                        w.Topmost = false;
+                        break;
+                    }
                 }
+
             }
 
-
-            if (!user.onBreak)
+            else
             {
 
                 switch (e.Reason)
@@ -282,6 +285,7 @@ namespace TimeforBreak
                             user.work_time = user.numbers[0];
                             settimer();
                             Trace.WriteLine("set timer from lock screen..");
+                            LockDataInsert();
                         }
                         else
                         {
@@ -299,16 +303,15 @@ namespace TimeforBreak
                             if (!isWindowOpen)
                             {
                                 Settings childWindow = new Settings();
-                                childWindow.MyEvent += new EventHandler(childWindow_MyEvent);
+                                //childWindow.MyEvent += new EventHandler(childWindow_MyEvent);
 
                                 childWindow.Show();
                                 // this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
-                         
-
+   
                             }
                             Trace.WriteLine("reset from screen lock...");
                         }
-                        LockDataInsert();
+                   
                         break;
                 }
             }
@@ -392,7 +395,9 @@ namespace TimeforBreak
                         { user._timer.Stop();
                             ni.Text = "Time for Break";
                         }
-                        this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
+                         this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
+                        //Settings childWindow = new Settings();
+                        //childWindow.Show();
                     }
 
                 }
@@ -403,10 +408,6 @@ namespace TimeforBreak
                 {   user._timer.Stop();
                     ni.Text = "Time for Break";
                 }
-
-               // ni.Text = "Time For Break";
-                // Setup login = new Setup();
-                //login.Show();
                 this.Close();
             }
 
@@ -458,7 +459,7 @@ namespace TimeforBreak
                     if (!isWindowOpen)
                     {
                         Settings childWindow = new Settings();
-                        childWindow.MyEvent += new EventHandler(childWindow_MyEvent);
+                        //childWindow.MyEvent += new EventHandler(childWindow_MyEvent);
 
                         childWindow.Show();
                         childWindow.Activate();
@@ -476,9 +477,6 @@ namespace TimeforBreak
                     ni.Text = "Time for Break";
                 }
 
-                // ni.Text = "Time For Break";
-                // Setup login = new Setup();
-                //login.Show();
                 this.Close();
             }
         }

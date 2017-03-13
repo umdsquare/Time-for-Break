@@ -30,6 +30,15 @@ namespace TimeforBreak
             DateTime t1 = DateTime.Now;
             user.today = t1.ToString("yyyy-MM-dd");
 
+            foreach (Window w in Application.Current.Windows)
+            {
+                if (w is MainWindow)
+                {
+                    this.Owner = w;
+                    break;
+                }
+            }
+
             fetchData();
 
         }
@@ -181,15 +190,14 @@ namespace TimeforBreak
                 }
 
                 con.Close();
-
-               
-                    user.work_time = user.numbers[0];
-                    this.OnMyEvent();
                   
                     // this.Loaded += new RoutedEventHandler(Child_Loaded);
                     user.work_time = user.numbers[0];
-                    this.OnMyEvent();
-                    Trace.WriteLine("on event here.., user.online = " + user.online );
+                ((MainWindow)this.Owner).settimer();
+                this.Close();
+
+                //this.OnMyEvent();
+                Trace.WriteLine("on event here.., user.online = " + user.online );
             }
 
             else
