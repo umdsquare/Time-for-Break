@@ -68,8 +68,9 @@ namespace TimeforBreak
             //    MessageBox.Show("2. " + e.Message);
             //}
 
+            //addIconSource();
             this.Dispatcher.UnhandledException += OnDispatcherUnhandledException;
-            appShortcut("Time for Break");
+            appShortcut("TimeforBreak");
 
             //ReadAllSettings();
             // AddToStartup();
@@ -91,7 +92,7 @@ namespace TimeforBreak
 
         private void appShortcut(string linkName)
         {
-            //string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+           
             var startup = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
 
             if (!File.Exists((startup + @"\" + "Time For Break")))
@@ -113,9 +114,28 @@ namespace TimeforBreak
                 {
                     Trace.WriteLine(e1.ToString());
                 }
-            }
+            }       
+        }
 
-           
+        private void addIconSource()
+        {
+
+            var Cwinsystem = "C:\\WINDOWS\\system32";
+            //string BaseDir = Assembly.GetEntryAssembly().Location;
+            string BaseDir = System.AppDomain.CurrentDomain.BaseDirectory;
+            Trace.WriteLine("BaseDir = " + BaseDir);
+
+            if (!File.Exists((Cwinsystem + @"\" + "logo.ico")))
+            {
+                try
+                {
+                    File.Copy(BaseDir + "logo.ico", Cwinsystem + @"\" + "logo.ico");
+                }
+                catch (Exception e1)
+                {
+                    Trace.WriteLine(e1.ToString());
+                }
+            }
         }
 
         //static void ReadAllSettings()

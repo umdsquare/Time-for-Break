@@ -8,7 +8,7 @@
         Title="TimeBreak" Height="70" Width="70"
         WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
-
+  
     <Grid>
 
         <!--<Image Name="timer" Source="timer.ico" ToolTip="" Margin="10" Stretch="Fill">
@@ -19,6 +19,7 @@
                 </ContextMenu>
             </Image.ContextMenu>
         </Image>-->
+        
     </Grid>
 
 </Window>

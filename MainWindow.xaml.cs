@@ -41,10 +41,6 @@ namespace TimeforBreak
         static string minStr = "";
         bool exist = false;
        
-        //NotifyIcon nIcon = new NotifyIcon();
-        //public static int response = 0;
-        //public static int response { get; set; }
-        //private Timer aTimer;
         System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
         System.Windows.Forms.ContextMenu contextMenu1 = new System.Windows.Forms.ContextMenu();
         System.Windows.Forms.MenuItem menu1 = new System.Windows.Forms.MenuItem();
@@ -326,10 +322,11 @@ namespace TimeforBreak
             menu1.Text = "Settings";
             menu1.Click += new System.EventHandler(this.menuItem1_Click);
             contextMenu1.MenuItems.Add(menu1);
+            string BaseDir = System.AppDomain.CurrentDomain.BaseDirectory;
 
             try
             {
-                ni.Icon = new Icon("logo.ico");               
+                ni.Icon = new Icon(BaseDir+"\\logo.ico");               
                 ni.ContextMenu = contextMenu1;
                 ni.Text = "Time For Break";
                 ni.Visible = true;
