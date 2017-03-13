@@ -1,0 +1,24 @@
+﻿<Window x:Class="TimeforBreak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeforBreak"
+        mc:Ignorable="d"
+        Title="TimeBreak" Height="70" Width="70"
+        WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent">
+
+    <Grid>
+
+        <!--<Image Name="timer" Source="timer.ico" ToolTip="" Margin="10" Stretch="Fill">
+            <Image.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Settings" Click="MenuItem_Click">
+                    </MenuItem>
+                </ContextMenu>
+            </Image.ContextMenu>
+        </Image>-->
+    </Grid>
+
+</Window>

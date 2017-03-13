@@ -1,0 +1,57 @@
+﻿<Window x:Class="TimeforBreak.NotiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeforBreak"
+        mc:Ignorable="d"
+        Title="TimeBreak" Height="300" Width="450"
+        WindowStyle="None" AllowsTransparency="True" Opacity="0.95" Background="Transparent"
+        WindowStartupLocation="Manual" Left="0" Top="0">
+
+    <Border Name="brd"  CornerRadius="15" Background="#f9f9ff">
+        <Grid RenderTransformOrigin="0,1">
+            <!--<Button IsCancel="True" Content="X"  Height="19" HorizontalAlignment="Right" Margin="0,17,24,0" 
+          Name="button_close" VerticalAlignment="Top" Width="20" FontFamily="Corbel" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+          FontStretch="Normal" Visibility="Visible" 
+          FontSize="13" Padding="0" Click="button_close_Click"/>-->
+            <Label x:Name="label" Content="Time for Break Reminder" HorizontalAlignment="Left" Margin="95,31,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="label1" Content="Hey! You've been working for" HorizontalAlignment="Left" Height="35" Margin="33,76,0,0" VerticalAlignment="Top" Width="404" FontSize="16"/>
+            <Label x:Name="label1_copy" Content="How about" HorizontalAlignment="Left" Height="35" Margin="330,76,0,0" VerticalAlignment="Top" Width="107" FontSize="16"/>
+            <RadioButton x:Name="radioButton"  VerticalContentAlignment="Center" Content="Yes, I'd like to." HorizontalAlignment="Left" Height="26" Margin="49,168,0,0" VerticalAlignment="Top" Width="287" Checked="radioButton_Checked" FontSize="16"/>
+
+            <Label x:Name="label1_Copy" Content="standing up" HorizontalAlignment="Left" Height="35" Margin="33,98,0,0" VerticalAlignment="Top" Width="110" FontSize="16"/>
+            <Label x:Name="label2_copy" Content="30 minutes." Foreground="#FF468499" HorizontalAlignment="Left" Height="27" Margin="244,77,0,0" VerticalAlignment="Top" Width="105" FontSize="16"/>
+            <Label x:Name="label1_Copy1" Content="or taking a walk?" HorizontalAlignment="Left" Height="35" Margin="123,98,0,0" VerticalAlignment="Top" Width="266" FontSize="16"/>
+            <Label x:Name="label5" Foreground="Orange" Content="" HorizontalAlignment="Left" Height="44" Margin="33,246,0,0" VerticalAlignment="Top" Width="391" />
+            <RadioButton x:Name="radioButton1"  VerticalContentAlignment="Center" Content="No, thanks. " HorizontalAlignment="Left" Height="26" Margin="49,210,0,0" VerticalAlignment="Top" Width="287" Checked="radioButton1_Checked" FontSize="16"/>
+            <Image x:Name="timer" Source="timer.ico" Margin="27,16,362,224" Stretch="Fill"/>
+            <!-- <Rectangle  Fill="#31698A" HorizontalAlignment="Left" Height="33" Margin="334,286,0,0" VerticalAlignment="Top" Width="57" UseLayoutRounding="True" RadiusY="4.833" RadiusX="4.833"/> -->
+
+            <!-- Animation -->
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
+                                <SplineDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                                <SplineDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+            </Grid.Triggers>
+
+            <Grid.RenderTransform>
+                <ScaleTransform ScaleY="1" />
+            </Grid.RenderTransform>
+
+        </Grid>
+    </Border>
+</Window>

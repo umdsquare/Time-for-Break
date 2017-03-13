@@ -1,0 +1,20 @@
+﻿<Window x:Class="TimeforBreak.Setup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeforBreak"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Time for Break" Height="300" Width="425">
+
+    <Grid>
+        <Rectangle Fill="#f0f0f0"  StrokeThickness="0"  HorizontalAlignment="Left" Height="71" Margin="0,198,0,0" Stroke="Black" VerticalAlignment="Top" Width="417"/>
+        <Rectangle Fill="#dfdfdf"  StrokeThickness="1" Stroke="#d6d6c2" HorizontalAlignment="Left" Height="1" Margin="0,198,0,0" VerticalAlignment="Top" Width="417"/>
+        <Button x:Name="login1" BorderThickness="2" Content="Sign Up" IsDefault="True" HorizontalAlignment="Left" Margin="217,214,0,0" VerticalAlignment="Top" Width="80" Height="32" Click="Login_Click" FontSize="14"/>
+        <Button x:Name="back" Content="Login" HorizontalAlignment="Right" Margin="0,214,24,0" VerticalAlignment="Top" Width="80" Height="32" Click="back_Click" FontSize="14"/>
+        <Label x:Name="label2" Content="" Foreground="Orange" HorizontalAlignment="Left" Height="30" Margin="31,163,0,0" VerticalAlignment="Top" Width="362" FontSize="14"/>
+        <Label x:Name="label" Content="Time for Break" Margin="116,35,113,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Image x:Name="timer" Source="timer.ico" Margin="170,80,170,113" Stretch="Fill"/>
+    </Grid>
+</Window>

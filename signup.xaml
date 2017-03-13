@@ -1,0 +1,31 @@
+﻿<Window x:Class="TimeforBreak.signup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeforBreak"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Sign Up - Time for Break" Height="450" Width="525">
+
+    <Grid Name="g1">
+        <TextBox x:Name="username" HorizontalAlignment="Left" Height="30" VerticalContentAlignment="Center"  Margin="92,195,0,0" TextWrapping="NoWrap"  VerticalAlignment="Top" Width="157" TextChanged="username_TextChanged" FontSize="14"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" VerticalContentAlignment="Center"  Height="30" Margin="92,244,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="157" FontSize="14" TextChanged="email_TextChanged"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Left" VerticalContentAlignment="Center"  Height="30" Margin="332,194,0,0" VerticalAlignment="Top" Width="157" PasswordChanged="Pwdbox_PasswordChanged" FontSize="14"/>
+        <PasswordBox x:Name="conpass" HorizontalAlignment="Left" VerticalContentAlignment="Center"  Height="30" Margin="332,244,0,0" VerticalAlignment="Top" Width="157" PasswordChanged="Pwdbox_conPasswordChanged" FontSize="14"/>
+        <Label x:Name="label1" Content="Username" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="30" Margin="18,194,0,0" VerticalAlignment="Top" Width="86" FontSize="14"/>
+        <Label x:Name="label1_Copy" Content="E-mail" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Height="36" Margin="18,242,0,0" VerticalAlignment="Top" Width="86" FontSize="14"/>
+        <Label x:Name="label1_Copy1" Content="Password" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Height="32" Margin="260,192,0,0" VerticalAlignment="Top" Width="72" FontSize="14"/>
+        <Label x:Name="label1_Copy2" Content="Confirm &#10;Password" HorizontalAlignment="Left" Height="49" Margin="262,237,0,0" VerticalAlignment="Top" Width="77" FontSize="14"/>
+        <Label x:Name="label2" Content="" Height="30" Foreground="Orange" Margin="26,304,24,0" VerticalAlignment="Top" FontSize="14"/>
+        <Image x:Name="timer" Source="timer.ico" Margin="230,71,204,266" Stretch="Fill"/>
+        <Label x:Name="label" Content="Time for Break Sign Up" Margin="121,21,94,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+
+        <Rectangle Fill="#f0f0f0"  StrokeThickness="0"  HorizontalAlignment="Left" Height="71" Margin="0,348,0,0" Stroke="Black" VerticalAlignment="Top" Width="517"/>
+        <Rectangle Fill="#dfdfdf"  StrokeThickness="1" Stroke="#d6d6c2" HorizontalAlignment="Left" Height="1" Margin="0,349,0,0" VerticalAlignment="Top" Width="517"/>
+        <Button x:Name="back" Content="Cancel" HorizontalAlignment="Right" Margin="0,364,24,0" VerticalAlignment="Top" Width="80" Height="32" Click="back_Click" FontSize="14"/>
+        <Button x:Name="signup1" Content="OK" HorizontalAlignment="Left" Margin="315,364,0,0" VerticalAlignment="Top" Width="80" Height="32" Click="Signup_Click" FontSize="14"/>
+    </Grid>
+
+
+</Window>
