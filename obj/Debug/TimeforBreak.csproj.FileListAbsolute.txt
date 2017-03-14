@@ -1,9 +1,14 @@
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\logo.ico
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\TimeforBreak.exe.config
+c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\TimeforBreak.exe.manifest
+c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\TimeforBreak.application
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\TimeforBreak.exe
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\TimeforBreak.pdb
+c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\CustomizedClickOnce.Common.dll
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\MySql.Data.dll
+c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\CustomizedClickOnce.Common.pdb
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\bin\Debug\MySql.Data.xml
+c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.csprojResolveAssemblyReference.cache
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\App.g.cs
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\Breakmode.g.cs
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\Buffwin.g.cs
@@ -35,6 +40,8 @@ c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.g.resources
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.Properties.Resources.resources
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.csproj.GenerateResource.Cache
+c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.TrustInfo.xml
+c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.exe.manifest
+c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.application
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.exe
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.pdb
-c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Debug\TimeforBreak.csprojResolveAssemblyReference.cache

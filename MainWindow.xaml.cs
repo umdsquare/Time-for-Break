@@ -326,7 +326,8 @@ namespace TimeforBreak
 
             try
             {
-                ni.Icon = new Icon(BaseDir+"\\logo.ico");               
+                ni.Icon = new Icon(BaseDir+"\\logo.ico");
+                //ni.Icon = new Icon("timer.ico");
                 ni.ContextMenu = contextMenu1;
                 ni.Text = "Time For Break";
                 ni.Visible = true;

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading;
 using Microsoft.Shell;
 using System.Collections.Generic;
+using CustomizedClickOnce.Common;
 
 namespace TimeforBreak
 {
@@ -70,7 +71,7 @@ namespace TimeforBreak
 
             //addIconSource();
             this.Dispatcher.UnhandledException += OnDispatcherUnhandledException;
-            appShortcut("TimeforBreak");
+            //appShortcut("TimeforBreak");
 
             //ReadAllSettings();
             // AddToStartup();
@@ -88,6 +89,23 @@ namespace TimeforBreak
                 Setup setup = new Setup();
                 setup.Show();
             }
+        }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            try
+            {
+                var clickOnceHelper = new ClickOnceHelper(Globals.PublisherName, Globals.ProductName);
+                clickOnceHelper.UpdateUninstallParameters();
+                clickOnceHelper.AddShortcutToStartup();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+
+
+            base.OnStartup(e);
         }
 
         private void appShortcut(string linkName)
