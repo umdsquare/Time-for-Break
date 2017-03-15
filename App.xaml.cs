@@ -2,12 +2,7 @@
 using System.Configuration;
 using System.Windows;
 using System.Diagnostics;
-using Microsoft.Win32;
-using System.Reflection;
-using System.Windows.Threading;
 using System.IO;
-using System.Linq;
-using System.Threading;
 using Microsoft.Shell;
 using System.Collections.Generic;
 using CustomizedClickOnce.Common;
@@ -101,7 +96,7 @@ namespace TimeforBreak
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex);
+                Debug.WriteLine("catch exception on start up"+ ex);
             }
 
 

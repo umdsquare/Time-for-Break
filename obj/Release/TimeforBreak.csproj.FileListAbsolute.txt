@@ -45,3 +45,10 @@ c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Release\TimeforBreak.application
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Release\TimeforBreak.exe
 c:\users\ypl5142\documents\visual studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Release\TimeforBreak.pdb
+C:\Users\ypl5142\Documents\Visual Studio 2015\Projects\TimeforBreak\Release\logo.ico
+C:\Users\ypl5142\Documents\Visual Studio 2015\Projects\TimeforBreak\Release\TimeforBreak.exe.config
+C:\Users\ypl5142\Documents\Visual Studio 2015\Projects\TimeforBreak\Release\TimeforBreak.exe.manifest
+C:\Users\ypl5142\Documents\Visual Studio 2015\Projects\TimeforBreak\Release\TimeforBreak.application
+C:\Users\ypl5142\Documents\Visual Studio 2015\Projects\TimeforBreak\Release\TimeforBreak.exe
+C:\Users\ypl5142\Documents\Visual Studio 2015\Projects\TimeforBreak\Release\TimeforBreak.pdb
+C:\Users\ypl5142\Documents\Visual Studio 2015\Projects\TimeforBreak\TimeforBreak\obj\Release\TimeforBreak_Content.g.cs

@@ -313,6 +313,7 @@ namespace TimeforBreak
             }
         }
 
+      
 
         public MainWindow()
         {
@@ -330,8 +331,9 @@ namespace TimeforBreak
                 //ni.Icon = new Icon("timer.ico");
                 ni.ContextMenu = contextMenu1;
                 ni.Text = "Time For Break";
+                //Shell_NotifyIcon(DWORD dwMessage, PNOTIFYICONDATA lpdata);
                 ni.Visible = true;
-                Trace.WriteLine("Added trayicon..");
+                //Trace.WriteLine("Added trayicon..");
             }
             catch (Exception e)
             {
