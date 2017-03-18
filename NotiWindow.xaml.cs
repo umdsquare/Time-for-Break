@@ -94,7 +94,7 @@ namespace TimeforBreak
         public NotiWindow()
         {
             InitializeComponent();
-            //SystemSounds.Asterisk.Play();
+            WPlaySound.PlaySoundEvent("isNotification.Default");
             // user._timer.Stop();
             this.Topmost = true;
             this.Activate();

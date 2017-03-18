@@ -6,6 +6,8 @@ using System.IO;
 using Microsoft.Shell;
 using System.Collections.Generic;
 using CustomizedClickOnce.Common;
+using System.Reflection;
+using Microsoft.Win32;
 
 namespace TimeforBreak
 {
@@ -52,18 +54,6 @@ namespace TimeforBreak
 
         public App()
         {
-
-            //try
-            //{
-            //    Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-            //    Assembly curAssembly = Assembly.GetExecutingAssembly();
-            //    key.SetValue(curAssembly.GetName().Name, curAssembly.Location);
-            //}
-            //catch (Exception e)
-            //{
-            //    MessageBox.Show("2. " + e.Message);
-            //}
-
             //addIconSource();
             this.Dispatcher.UnhandledException += OnDispatcherUnhandledException;
             //appShortcut("TimeforBreak");
@@ -86,8 +76,28 @@ namespace TimeforBreak
             }
         }
 
+        private void AutoTrayicon()
+        {
+            try
+            {
+                Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explore", true);
+                //Assembly curAssembly = Assembly.GetExecutingAssembly();
+                if (key != null)  //must check for null key
+                {
+                    key.SetValue("EnableAutoTray", "0", RegistryValueKind.String);
+                }
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show("2. " + e.Message);
+            }
+        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
+            //AutoTrayicon();
+
             try
             {
                 var clickOnceHelper = new ClickOnceHelper(Globals.PublisherName, Globals.ProductName);

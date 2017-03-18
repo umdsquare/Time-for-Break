@@ -313,13 +313,28 @@ namespace TimeforBreak
             }
         }
 
+        private void showBalloon(string title, string body, int seconds)
+        {
       
+            if (title != null)
+            {
+                ni.BalloonTipTitle = title;
+            }
+
+            if (body != null)
+            {
+                ni.BalloonTipText = body;
+            }
+
+            ni.ShowBalloonTip(seconds);
+      
+        }
 
         public MainWindow()
         {
             InitializeComponent();
             ShowInTaskbar = false;
-        
+         
             menu1.Text = "Settings";
             menu1.Click += new System.EventHandler(this.menuItem1_Click);
             contextMenu1.MenuItems.Add(menu1);
@@ -328,11 +343,12 @@ namespace TimeforBreak
             try
             {
                 ni.Icon = new Icon(BaseDir+"\\logo.ico");
-                //ni.Icon = new Icon("timer.ico");
                 ni.ContextMenu = contextMenu1;
                 ni.Text = "Time For Break";
-                //Shell_NotifyIcon(DWORD dwMessage, PNOTIFYICONDATA lpdata);
                 ni.Visible = true;
+                
+                //ni.ShowBalloonTip(5000, "Time for Break", "Hi, don't forget the icon is here.", System.Windows.Forms.ToolTipIcon.Info);
+                //showBalloon("time for Break","The icon is here.",3000);
                 //Trace.WriteLine("Added trayicon..");
             }
             catch (Exception e)
