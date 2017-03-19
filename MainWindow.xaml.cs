@@ -91,6 +91,7 @@ namespace TimeforBreak
             Trace.WriteLine(user.title);
 
             NotiWindow notiWin = new NotiWindow();
+            WPlaySound.PlaySoundEvent("isNotification.Default");
             notiWin.Show();
             //System.Windows.Threading.Dispatcher.Run();
 
